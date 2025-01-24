@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - The Best Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styling similar to previous code */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        .settings-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-container h2 {
+            text-align: center;
+        }
+
+        .settings-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .settings-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="settings-container">
+    <h2>Account Settings</h2>
+    <input type="text" id="profile-name" placeholder="Your Name" value="John Doe">
+    <input type="email" id="profile-email" placeholder="Email" value="john@example.com">
+    <input type="password" id="profile-password" placeholder="New Password">
+    <button onclick="updateAccount()">Update Settings</button>
+</div>
+
+<script>
+    function updateAccount() {
+        const name = document.getElementById('profile-name').value;
+        const email = document.getElementById('profile-email').value;
+        const password = document.getElementById('profile-password').value;
+        alert(`Account updated for ${name}`);
+    }
+</script>
+
+</body>
+</html>
+<!-- Account Settings Page (account-settings.html) -->
+<div class="settings-container" style="display: none;" id="account-settings">
+    <h2>Account Settings</h2>
+    <input type="text" id="profile-name" placeholder="Your Name" value="John Doe">
+    <input type="email" id="profile-email" placeholder="Email" value="john@example.com">
+    <input type="password" id="profile-password" placeholder="New Password">
+    <button onclick="updateAccount()">Update Settings</button>
+    <br><br>
+    <button onclick="goBackHome()">Go Back to Home</button>
+</div>
+
+<script>
+    // Sign Up function
+    function signUp() {
+        const email = document.getElementById('sign-up-email').value;
+        const password = document.getElementById('sign-up-password').value;
+        alert(`Sign-up successful for ${email}`);
+        window.location.href = '#account-settings';  // Redirect to account settings after successful sign-up
+    }
+
+    // Log In function
+    function login() {
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        alert(`Logged in successfully as ${email}`);
+        window.location.href = '#account-settings';  // Redirect to account settings after successful login
+    }
+
+    // Update Account function
+    function updateAccount() {
+        const name = document.getElementById('profile-name').value;
+        const email = document.getElementById('profile-email').value;
+        const password = document.getElementById('profile-password').value;
+        alert(`Account updated for ${name}`);
+    }
+
+    // Go Back to Home function
+    function goBackHome() {
+        window.location.href = 'index.html';  // Redirects the user to the home page
+    }
+</script>
+
